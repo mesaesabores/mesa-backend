@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "src/main.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "src/main.py"
+    }
+  ],
+  "env": {
+    "SUPABASE_URL": "",
+    "SUPABASE_KEY": "",
+    "WHATSAPP_PHONE_NUMBER": "",
+    "SECRET_KEY": ""
+  }
+}
